@@ -1,8 +1,8 @@
 amqp==5.0.6
 aniso8601==7.0.0
 asgiref==3.3.1
-bcrypt==4.0.0
-beautifulsoup4==4.9.3
+
+
 billiard==3.6.4.0
 bleach==5.0.1
 cached-property==1.5.2
@@ -46,7 +46,7 @@ matplotlib==3.4.2
 numpy==1.20.3
 oauthlib==3.1.1
 opentracing==2.4.0
-pandas==1.2.4
+
 Pillow==8.1.0
 promise==2.3
 prompt-toolkit==3.0.19
