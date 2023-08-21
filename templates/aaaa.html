@@ -1,0 +1,93 @@
+<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-3">
+				    <nav id="navi">
+					    <ul>
+					      <li><a href="#page-1">Education</a></li>
+					      <li><a href="#page-2">Experience</a></li>
+					      <li><a href="#page-3">Skills</a></li>
+					      <li><a href="#page-4">Awards</a></li>
+					    </ul>
+					  </nav>
+					</div>
+					<div class="col-md-9">
+					  <div id="page-1" class= "page one">
+					  	<h2 class="heading">Education</h2>
+                          {% for education in eduations %}
+					    <div class="resume-wrap d-flex ftco-animate">
+					    	<div class="icon d-flex align-items-center justify-content-center">
+					    		<img src="images/pics/graduate.png" alt="Graduation Cap" style="width: 50px; height: 50px;">
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">{{education.date}}</span>
+		    					<h2>{{education.degree}}</h2>
+		    					<span class="position">{{education.university}}</span>
+		    					<p>{{education.desc}}</p>
+	    					</div>
+	    				</div>
+                         {% endfor %}
+					  </div>
+
+					  <div id="page-2" class= "page two">
+					  	<h2 class="heading">Work Experience</h2>
+                          {% for experience in experiences %}
+
+					    <div class="resume-wrap d-flex ftco-animate">
+					    	<div class="icon d-flex align-items-center justify-content-center">
+					    		<img src="images/pics/briefcase.png" alt="Graduation Cap" style="width: 50px; height: 50px;">
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">{{experience.date}}</span>
+		    					<h2>{{experience.framework}}</h2>
+		    					<span class="position">{{experience.company}}</span>
+		    					<p>{{experience.desc}}</p>
+		    				</div>
+	    				</div>
+                           {% endfor  %}
+                      </div>
+
+                        <div id="page-3" class= "page three">
+					  	<h2 class="heading">Skills</h2>
+
+
+                            <section class="skills">
+							  <table>
+								  <tr>
+									    <th>Category</th>
+                                        <th>Skills</th>
+                                  </tr>
+								   {% for category in categories %}
+								  <tr>
+                                      <td>{{ category.name }}</td>
+
+										  <td>
+                                                 {% for skill in category.skill_set.all %}
+									             {{ skill.name }}{% if not forloop.last %}, {% endif %}
+                                                  {% endfor %}
+                                          </td>
+
+                                  </tr>
+
+                                  {% endfor %}
+            <!-- Add more rows for each skill category -->
+							  </table>
+                          </section>
+
+
+                        </div>
+
+
+
+					  <div id="page-4" class= "page four">
+					    <h2 class="heading">Awards</h2>
+
+
+
+
+					  </div>
+					</div>
+			  </div>
+    	</div>
+    </section>
+

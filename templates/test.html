@@ -1,0 +1,75 @@
+<!-- In your Django template (e.g., skills.html) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Skills</h1>
+    </header>
+    		  <section class="skills">
+							  <table>
+								  <tr>
+									    <th>Category</th>
+                <th>Skills</th>
+            </tr>
+            <tr>
+                <td>Cyber Security</td>
+                <td>Network Security, Penetration Testing, Incident Response, Threat Hunting</td>
+            </tr>
+            <tr>
+                <td>Ethical Hacking</td>
+                <td>Web Application Security, Wireless Security, Social Engineering</td>
+            </tr>
+            <tr>
+                <td>Programming Languages</td>
+                <td>Python, Bash</td>
+            </tr>
+            <!-- Add more rows for each skill category -->
+        </table>
+    </section>
+</body>
+</html>
