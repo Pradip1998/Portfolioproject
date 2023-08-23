@@ -10,4 +10,5 @@ def home(request):
     experiences = Experience.objects.all().order_by('id')
     categories = SkillCategory.objects.all()
     certifications= Certification.objects.all()
-    return render(request, 'index.html', {'abouts': abouts,'eduations':eduations,'experiences' : experiences,'categories': categories,'certifications': certifications})
+    projects = Project.objects.all()
+    return render(request, 'index.html', {'abouts': abouts,'eduations':eduations,'experiences' : experiences,'categories': categories,'certifications': certifications,'projects' :projects})

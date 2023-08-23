@@ -56,6 +56,14 @@ class Certification(models.Model):
     def __str__(self):
         return self.name
 
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    project_scope = models.CharField(max_length=200)
+    start_date =models.CharField(max_length=200)
+    def __str__(self):
+        return self.title
+
 
 
 
