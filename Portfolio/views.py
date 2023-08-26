@@ -12,3 +12,8 @@ def home(request):
     certifications= Certification.objects.all()
     projects = Project.objects.all()
     return render(request, 'index.html', {'abouts': abouts,'eduations':eduations,'experiences' : experiences,'categories': categories,'certifications': certifications,'projects' :projects})
+
+
+def single(request,id):
+    eduations = Education.objects.get(pk=id)
+    return render(request, 'lala.html', {'eduations': eduations})
