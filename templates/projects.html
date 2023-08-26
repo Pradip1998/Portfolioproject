@@ -1,0 +1,18 @@
+{% extends "test.html" %}
+
+
+{% block header %}
+
+<h1> {{ project.title }} </h1>
+
+{% endblock %}
+
+
+{% block content %}
+ <div class="text pl-3">
+     <span class="date">{{ project.start_date }}</span>
+     <h2>{{ project.title }}</h2>
+     <span class="position">{{ project.scope }}</span>
+ </div>
+<span class="position" style="color: black ;">{{ project.description }}</span>
+{% endblock %}

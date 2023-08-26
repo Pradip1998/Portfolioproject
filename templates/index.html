@@ -193,11 +193,11 @@
                           {% for education in eduations %}
 					    <div class="resume-wrap d-flex ftco-animate">
 					    	<div class="justify-content-center">
-								<a href="{% url  'portfolio:single' education.id %}"><img src="images/pics/graduate.png" alt="Graduation Cap" style="width: 50px; height: 50px;"></a>
+								<a href="{% url  'portfolio:education' education.id %}"><img src="images/pics/graduate.png" alt="Graduation Cap" style="width: 50px; height: 50px;"></a>
 					    	</div>
 					    	<div class="text pl-3">
 		    					<span class="date">{{education.date}}</span>
-								<a href="{% url  'portfolio:single' education.id %}"> <h2>{{education.degree}}</h2> </a>
+								<a href="{% url  'portfolio:education' education.id %}"> <h2>{{education.degree}}</h2> </a>
 		    					<span class="position">{{education.university}}</span>
 		    					<p>{{education.desc}}</p>
 	    					</div>
@@ -256,8 +256,7 @@
 
 					    <div class="resume-wrap d-flex ftco-animate">
 					    	<div class="justify-content-center">
-                                <img src="images/pics/project.png" alt="Graduation Cap" style="width: 50px; height: 50px;">
-
+								<a href="{% url  'portfolio:project' project.id %}"> <img src="images/pics/project.png" alt="Graduation Cap" style="width: 50px; height: 50px;"></a>
 					    	</div>
 					    	<div class="text pl-3">
 		    					<span class="date">{{ project.start_date }}</span>
@@ -288,10 +287,10 @@
     <div class="row no-gutters">
             {% for certificate in certifications %}
         <div class="col-md-4">
-            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style=" background-image:url({{ certificate.image.url }}) ; ">
+           <a href="{% url  'portfolio:certificate' certificate.id %}"> <div class="project img ftco-animate d-flex justify-content-center align-items-center" style=" background-image:url({{ certificate.image.url }}) ; ">
                 <div class="overlay"></div>
                 <div class="text text-center p-4">
-                    <h3><a href="#">{{ certificate.name }}</a></h3>
+                    <h3><a href="{% url  'portfolio:certificate' certificate.id %}">{{ certificate.name }}</a></h3>
                     <span>{{ certificate.title }}</span>
                 </div>
             </div>

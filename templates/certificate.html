@@ -1,0 +1,21 @@
+{% extends "test.html" %}
+
+
+{% block header %}
+
+<div class="project img ftco-animate d-flex justify-content-center align-items-center" style=" background-image:url({{ certificate.image.url }}) ; ">
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="text pl-3">
+     <h2>{{ certificate.name }}</h2>
+     <span class="position">{{ certificate.title }}</span>
+
+ </div>
+<span class="position" style="color: black ;">{{ certificate.description  }}</span>
+
+{% endblock %}
