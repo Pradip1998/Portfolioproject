@@ -9,11 +9,6 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
-import django_heroku
-import dj_database_url
-
-from decouple import config
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -143,6 +138,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'default from email'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompresedManifestStaticFilesStorage'
-
-django_heroku(locals())
